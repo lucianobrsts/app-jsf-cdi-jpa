@@ -54,6 +54,14 @@
 			<version>3.11</version>
 		</dependency>
 
+		<!-- Identificador de idiomas -->
+		<dependency>
+			<groupId>antlr</groupId>
+			<artifactId>antlr</artifactId>
+			<version>2.7.7</version>
+		</dependency>
+
+
 		<!-- PROVIDER JPA(HIBERNATE) -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
