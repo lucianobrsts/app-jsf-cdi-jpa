@@ -1,3 +1,6 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
@@ -63,16 +66,36 @@
                     </h:panelGrid>
 
                     <p:messages autoUpdate="true" closable="true" severity="error">
-                    	<p:autoUpdate />
+                        <p:autoUpdate/>
                     </p:messages>
-                    
+
                     <p:messages showDetail="true" autoUpdate="true" closable="true" severity="warn">
-                    	<p:autoUpdate />
+                        <p:autoUpdate/>
                     </p:messages>
-                    
+
                     <p:messages showDetail="true" autoUpdate="true" closable="true" severity="info">
-                    	<p:autoUpdate />
+                        <p:autoUpdate/>
                     </p:messages>
+
+                </h:form>
+            </p:tab>
+
+            <p:tab title="Upload Xml Pessoa">
+
+                <h:form id="form-upload" enctype="multipart/form-data">
+
+                    <h:panelGrid id="panelGrid-upload-xml" columns="2" cellpadding="10">
+
+                        <p:fileUpload value="#{cadastrarPessoaController.file}"
+                                      mode="simple"
+                                      skinSimple="true"
+                                      label="Selecionar"/>
+
+                        <p:commandButton value="Importar..."
+                                         ajax="false"
+                                         actionListener="#{cadastrarPessoaController.UploadRegistros}"/>
+
+                    </h:panelGrid>
 
                 </h:form>
             </p:tab>
