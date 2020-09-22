@@ -56,7 +56,7 @@ public class CadastrarPessoaController {
 	/**
 	 *SALVA UM NOVO REGISTRO VIA INPUT 
 	 */
-	public void SalvarNovaPessoa(){
+	public void salvarNovaPessoa(){
  
 		pessoaModel.setUsuarioModel(this.usuarioController.GetUsuarioSession());
  
