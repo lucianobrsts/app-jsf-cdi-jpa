@@ -14,18 +14,17 @@ public class PessoaRepository {
 
 	@Inject
 	PessoaEntity pessoaEntity;
-
-	@Inject
+ 
 	EntityManager entityManager;
-
+ 
 	/***
 	 * MÉTODO RESPONSÁVEL POR SALVAR UMA NOVA PESSOA
-	 * 
 	 * @param pessoaModel
 	 */
-	public void salvarNovoRegistro(PessoaModel pessoaModel) {
-		entityManager = Uteis.JpaEntityManager();
-
+	public void salvarNovoRegistro(PessoaModel pessoaModel){
+ 
+		entityManager =  Uteis.JpaEntityManager();
+ 
 		pessoaEntity = new PessoaEntity();
 		pessoaEntity.setDataCadastro(LocalDateTime.now());
 		pessoaEntity.setEmail(pessoaModel.getEmail());
@@ -33,13 +32,13 @@ public class PessoaRepository {
 		pessoaEntity.setNome(pessoaModel.getNome());
 		pessoaEntity.setOrigemCadastro(pessoaModel.getOrigemCadastro());
 		pessoaEntity.setSexo(pessoaModel.getSexo());
-
-		UsuarioEntity usuarioEntity = entityManager.find(UsuarioEntity.class,
-				pessoaModel.getUsuarioModel().getCodigo());
-
+ 
+		UsuarioEntity usuarioEntity = entityManager.find(UsuarioEntity.class, pessoaModel.getUsuarioModel().getCodigo()); 
+ 
 		pessoaEntity.setUsuarioEntity(usuarioEntity);
-
+ 
 		entityManager.persist(pessoaEntity);
+ 
 	}
 
 }
