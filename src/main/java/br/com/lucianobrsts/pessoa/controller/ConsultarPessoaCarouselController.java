@@ -12,7 +12,7 @@ import javax.inject.Named;
 import br.com.lucianobrsts.model.PessoaModel;
 import br.com.lucianobrsts.repository.PessoaRepository;
 
-@Named(value = "consultaPessoaCarouselController")
+@Named(value = "consultarPessoaCarouselController")
 @ViewScoped
 public class ConsultarPessoaCarouselController implements Serializable {
 
